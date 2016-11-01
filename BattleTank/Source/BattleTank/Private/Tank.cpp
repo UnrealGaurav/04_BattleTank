@@ -43,5 +43,7 @@ void ATank::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 
 void ATank::AimAt(FVector HitLocation)
 {
-	TankAimingComponent->AimAt(HitLocation);
+	// The calling function from Tank doesn't need to use Launch Speed.
+	// The tank will make the aiming component use this member variable.
+	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }

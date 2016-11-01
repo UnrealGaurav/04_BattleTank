@@ -34,4 +34,7 @@ private:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
+	// For the launch speed to be visible in blueprint, it needs to be a UPROPERTY.
+	UPROPERTY(EditAnywhere,Category = Firing)
+	float LaunchSpeed = 100000; // TODO Find sensible default.
 };
